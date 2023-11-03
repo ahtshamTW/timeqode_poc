@@ -17,9 +17,32 @@ import logo from '../assets/images/logo.svg';
 import iconGlobe from '../assets/images/icon-globe.svg';
 import '../App.css';
 
-
-const pages = ['Business Solutions', 'Platform', 'Tailored Solutions', 'Partnerships', 'Media Hub', 'Contact Us', 'Eng'];
-const subMenu = ['Horizontal Solutions', 'B2B Platforms', 'Expense Management', 'Procurement', 'Invoice Recognition', 'Timeqode SAF-T', 'RO e-Factura', 'RO e-Transport', 'Mobile SAF', 'Vertical Solutions', 'Banking', 'Healthcare', 'Construction Sites', 'Legal 365', 'Agriculture'];
+const pages = [
+  'Business Solutions',
+  'Platform',
+  'Tailored Solutions',
+  'Partnerships',
+  'Media Hub',
+  'Contact Us',
+  'Eng',
+];
+const subMenu = [
+  'Horizontal Solutions',
+  'B2B Platforms',
+  'Expense Management',
+  'Procurement',
+  'Invoice Recognition',
+  'Timeqode SAF-T',
+  'RO e-Factura',
+  'RO e-Transport',
+  'Mobile SAF',
+  'Vertical Solutions',
+  'Banking',
+  'Healthcare',
+  'Construction Sites',
+  'Legal 365',
+  'Agriculture',
+];
 const theme = createTheme({
   palette: {
     blue: {
@@ -34,7 +57,6 @@ subMenu.forEach((subPage, index) => {
   const columnIndex = Math.floor(index / 5);
   columns[columnIndex].push(subPage);
 });
-
 
 function MenuBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -63,19 +85,29 @@ function MenuBar() {
   theme.props = {
     MuiList: {
       onMouseLeave: () => handleCloseSubmenu(hoveredButton),
-
     },
   };
 
   return (
     <ThemeProvider theme={theme}>
       <Container disableGutters maxWidth="xl" sx={{ bgcolor: '#FFFFFF' }}>
-        <Box sx={{ flexGrow: 1, justifyContent: 'space-between', alignItems: 'center', display: { xs: 'flex', md: 'none' }, height: '95px', px: 2 }}>
-          <Icon sx={{
-            display: 'flex',
-            width: '168px',
-            height: '31px',
-          }}>
+        <Box
+          sx={{
+            flexGrow: 1,
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            display: { xs: 'flex', md: 'none' },
+            height: '95px',
+            px: 2,
+          }}
+        >
+          <Icon
+            sx={{
+              display: 'flex',
+              width: '168px',
+              height: '31px',
+            }}
+          >
             <img src={logo} alt="logo" />
           </Icon>
           <IconButton
@@ -115,28 +147,50 @@ function MenuBar() {
           </Menu>
         </Box>
 
-        <Box sx={{ flex: 1, flexGrow: 1, flexDirection: 'column', display: { xs: 'none', md: 'flex' }, alignItems: 'center', bgcolor: '#FFFFFF' }}>
-          <Icon sx={{
-            marginTop: '48px',
-            width: '284px',
-            height: '52px',
-            opacity: 1,
-          }}>
-            <img src={logo} className="classes.App-logo" alt="logo" />
+        <Box
+          sx={{
+            flex: 1,
+            flexGrow: 1,
+            flexDirection: 'column',
+            display: { xs: 'none', md: 'flex' },
+            alignItems: 'center',
+            bgcolor: '#FFFFFF',
+          }}
+        >
+          <Icon
+            sx={{
+              marginTop: '48px',
+              width: '284px',
+              height: '52px',
+              opacity: 1,
+            }}
+          >
+            <img src={logo} alt="logo" />
           </Icon>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center', bgcolor: '#FFFFFF' }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
+              justifyContent: 'center',
+              bgcolor: '#FFFFFF',
+            }}
+          >
             {pages.map((page, index) => (
               <ButtonBase
                 disableRipple
                 key={page}
                 sx={{
-                  my: 3, mx: 1, color: '#2D4156', display: 'flex', textTransform: 'capitalize',
-                  fontFamily: "Montserrat",
-                  fontSize: '20px', padding: '8px',
+                  my: 3,
+                  mx: 1,
+                  color: '#2D4156',
+                  display: 'flex',
+                  textTransform: 'capitalize',
+                  fontFamily: 'Montserrat',
+                  fontSize: '20px',
+                  padding: '8px',
                   '&:hover': {
                     color: '#009FF7',
                   },
-                  
                 }}
                 aria-owns={open ? 'menu-appbar' : null}
                 aria-haspopup="true"
@@ -145,66 +199,74 @@ function MenuBar() {
                 style={{ zIndex: 1301 }}
                 disableElevation
               >
-                {page === 'Eng' && <Icon sx={{
-                  display: 'flex',
-                  paddingRight: '8px',
-                  "&:hover": { color: '#009FF7' }
-                }}>
-                  <img src={iconGlobe} alt="logo" />
-                </Icon>}
+                {page === 'Eng' && (
+                  <Icon
+                    sx={{
+                      display: 'flex',
+                      paddingRight: '8px',
+                      '&:hover': { color: '#009FF7' },
+                    }}
+                  >
+                    <img src={iconGlobe} alt="logo" />
+                  </Icon>
+                )
+                }
                 {page}
-                {page === 'Business Solutions' && <Menu
-                  id="menu-appbar"
-                  anchorEl={submenuAnchors[page]}
-                  open={hoveredButton === page}
-                  anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
-                  }}
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'left',
-                  }}
-                >
-                  <div style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    marginTop: '10px'
-                  }}>
-                    {columns.map((column, columnIndex) => (
-                      <div key={columnIndex} style={{ width: '300px' }}>
-                        {column.map((subPage, subIndex) => (
-                          <ButtonBase
-                            disableRipple
-                            key={subPage}
-                            sx={{
-                              color: '#2D4156',
-                              display: 'flex',
-                              textTransform: 'capitalize',
-                              fontSize: '15px',
-                              padding: '8px',
-                              '&:hover': {
-                                color: '#009FF7',
-                              },
-                              fontFamily: "Montserrat",
-                            }}
-                            aria-owns={open ? 'menu-appbar' : null}
-                            aria-haspopup="true"
-                            onMouseOver={(event) => { }}
-                            onMouseLeave={() => { }}
-                            style={{
-                              // zIndex: 1301,
-                              textAlign: 'center',
-                            }}
-                            disableElevation
-                          >
-                            {subPage}
-                          </ButtonBase>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-                </Menu>}
+                {page === 'Business Solutions' && (
+                  <Menu
+                    id="menu-appbar"
+                    anchorEl={submenuAnchors[page]}
+                    open={hoveredButton === page}
+                    anchorOrigin={{
+                      vertical: 'bottom',
+                      horizontal: 'left',
+                    }}
+                    transformOrigin={{
+                      vertical: 'top',
+                      horizontal: 'left',
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        marginTop: '10px',
+                      }}
+                    >
+                      {columns.map((column, columnIndex) => (
+                        <div key={columnIndex} style={{ width: '300px' }}>
+                          {column.map((subPage, subIndex) => (
+                            <ButtonBase
+                              disableRipple
+                              key={subPage}
+                              sx={{
+                                color: '#2D4156',
+                                display: 'flex',
+                                textTransform: 'capitalize',
+                                fontSize: '15px',
+                                padding: '8px',
+                                '&:hover': {
+                                  color: '#009FF7',
+                                },
+                                fontFamily: 'Montserrat',
+                              }}
+                              aria-owns={open ? 'menu-appbar' : null}
+                              aria-haspopup="true"
+                              onMouseOver={(event) => {}}
+                              onMouseLeave={() => {}}
+                              style={{
+                                textAlign: 'center',
+                              }}
+                              disableElevation
+                            >
+                              {subPage}
+                            </ButtonBase>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  </Menu>
+                )}
               </ButtonBase>
             ))}
           </Box>

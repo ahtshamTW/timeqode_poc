@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Button, Container, Grid, Typography } from '@mui/material';
 import * as React from 'react';
 
 function ExpenseManagement() {
@@ -10,7 +10,7 @@ function ExpenseManagement() {
                     &nbsp;
                 </Grid>
                 {/* Right Side */}
-                <Grid item xs={12} sm={7} sx={{ mx:{xs: '16px', sm: '0px'} }}>
+                <Grid item xs={12} sm={7} sx={{ mx: { xs: '16px', sm: '0px' } }}>
                     <Typography
                         variant='h3'
                         fontWeight={900}
@@ -23,7 +23,8 @@ function ExpenseManagement() {
                         }}
                         fontFamily={"Montserrat"}
                         color={"#2D4156"}
-                        textAlign={{ xs: "center", sm: "left" }}                    >
+                        textAlign={{ xs: "center", sm: "left" }}
+                    >
                         <span>Expense</span>
                         <span>Management</span>
                     </Typography>
