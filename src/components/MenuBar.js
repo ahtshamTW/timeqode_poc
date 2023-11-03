@@ -50,19 +50,6 @@ function MenuBar() {
     setAnchorEl(null);
   };
 
-  // const handleOpen = (event, page) => {
-  //   console.log(event);
-  //   setAnchorEl(event.currentTarget);
-  //   setHoveredButton(page);
-  //   setOpen(true);
-  // };
-
-  // const handleClose = (e) => {
-  //   setAnchorEl(null);
-  //   setHoveredButton(null);
-  //   setOpen(false);
-  // };
-
   const handleOpenSubmenu = (event, page) => {
     setSubmenuAnchors({ ...submenuAnchors, [page]: event.currentTarget });
     setHoveredButton(page);
@@ -89,7 +76,7 @@ function MenuBar() {
             width: '168px',
             height: '31px',
           }}>
-            <img src={logo} className="classes.App-logo" alt="logo" />
+            <img src={logo} alt="logo" />
           </Icon>
           <IconButton
             size="large"
@@ -172,11 +159,11 @@ function MenuBar() {
                   open={hoveredButton === page}
                   anchorOrigin={{
                     vertical: 'bottom',
-                    horizontal: 'center',
+                    horizontal: 'left',
                   }}
                   transformOrigin={{
                     vertical: 'top',
-                    horizontal: 'center',
+                    horizontal: 'left',
                   }}
                 >
                   <div style={{
