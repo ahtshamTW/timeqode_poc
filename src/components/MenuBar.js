@@ -144,10 +144,12 @@ function MenuBar() {
                 key={page}
                 sx={{
                   my: 3, mx: 1, color: '#2D4156', display: 'flex', textTransform: 'capitalize',
+                  fontFamily: "Montserrat",
                   fontSize: '20px', padding: '8px',
                   '&:hover': {
                     color: '#009FF7',
                   },
+                  
                 }}
                 aria-owns={open ? 'menu-appbar' : null}
                 aria-haspopup="true"
@@ -197,6 +199,7 @@ function MenuBar() {
                               '&:hover': {
                                 color: '#009FF7',
                               },
+                              fontFamily: "Montserrat",
                             }}
                             aria-owns={open ? 'menu-appbar' : null}
                             aria-haspopup="true"
