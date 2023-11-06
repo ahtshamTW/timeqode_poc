@@ -1,7 +1,8 @@
-import './App.css';
-import MenuBar from './components/MenuBar';
-import Footer from './components/footer';
-import Pricing from './components/pricing';
+import "./App.css";
+import MenuBar from "./components/MenuBar";
+import Footer from "./components/footer";
+import Help from "./components/help";
+import Pricing from "./components/pricing";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <header className="App-header">
         <MenuBar />
         <Pricing />
+        <Help />
         <Footer />
       </header>
     </div>
