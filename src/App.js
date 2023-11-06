@@ -1,8 +1,9 @@
-import './App.css';
-import MenuBar from './components/MenuBar';
+import "./App.css";
+import MenuBar from "./components/MenuBar";
 import ExpenseManagement from './components/expenseManagement';
-import Footer from './components/footer';
-import Pricing from './components/pricing';
+import Footer from "./components/footer";
+import Help from "./components/help";
+import Pricing from "./components/pricing";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <MenuBar />
         <ExpenseManagement />
         <Pricing />
+        <Help />
         <Footer />
       </header>
     </div>
