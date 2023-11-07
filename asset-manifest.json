@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/timeqode_poc/static/css/main.5d98b8b2.css",
-    "main.js": "/timeqode_poc/static/js/main.69f00551.js",
+    "main.css": "/timeqode_poc/static/css/main.a3274059.css",
+    "main.js": "/timeqode_poc/static/js/main.36d9fd20.js",
     "static/js/787.22f79fa1.chunk.js": "/timeqode_poc/static/js/787.22f79fa1.chunk.js",
+    "static/media/light-3-min2x.jpg": "/timeqode_poc/static/media/light-3-min2x.dff306c3dac1d994f8b3.jpg",
     "static/media/functionalities-mobile.png": "/timeqode_poc/static/media/functionalities-mobile.d93a7e30040564375640.png",
     "static/media/functionalities.png": "/timeqode_poc/static/media/functionalities.8769bdeb14d157e64422.png",
+    "static/media/light-2-min2x.jpg": "/timeqode_poc/static/media/light-2-min2x.20ac6165d1f64329658b.jpg",
     "static/media/functionalities2x.png": "/timeqode_poc/static/media/functionalities2x.3dbb83ccb78e2da0a060.png",
     "static/media/logo2x-white.png": "/timeqode_poc/static/media/logo2x-white.0bed6fa5aeb50f44c9ba.png",
+    "static/media/dark-3-min2x.jpg": "/timeqode_poc/static/media/dark-3-min2x.c1bf99001af96b879be0.jpg",
     "static/media/report-mobile.png": "/timeqode_poc/static/media/report-mobile.c7268d8ea295e027f5f8.png",
     "static/media/report.png": "/timeqode_poc/static/media/report.6d18ffb343ef28eef5f8.png",
     "static/media/report2x.png": "/timeqode_poc/static/media/report2x.569e5c86c53bdf7c214a.png",
+    "static/media/light-4-min2x.jpg": "/timeqode_poc/static/media/light-4-min2x.ed748203ecd3debc1773.jpg",
     "static/media/logo-white.png": "/timeqode_poc/static/media/logo-white.c693cd2b40bd1324b711.png",
+    "static/media/dark-1-min2x.jpg": "/timeqode_poc/static/media/dark-1-min2x.79462f663495befffe5f.jpg",
+    "static/media/dark-2-min2x.jpg": "/timeqode_poc/static/media/dark-2-min2x.fe9021649ed6d1a55c05.jpg",
+    "static/media/dark-5-min2x.jpg": "/timeqode_poc/static/media/dark-5-min2x.a9c3cfe566f71fec6b44.jpg",
+    "static/media/light-1-min2x.jpg": "/timeqode_poc/static/media/light-1-min2x.6625a55734893963a760.jpg",
+    "static/media/dark-4-min2x.jpg": "/timeqode_poc/static/media/dark-4-min2x.e8273f1aa8f3b97d5d37.jpg",
     "static/media/roboto-latin-500-normal.woff2": "/timeqode_poc/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/timeqode_poc/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
     "static/media/roboto-latin-400-normal.woff2": "/timeqode_poc/static/media/roboto-latin-400-normal.b009a76ad6afe4ebd301.woff2",
@@ -71,12 +80,12 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/timeqode_poc/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "static/media/icon-globe-selected.svg": "/timeqode_poc/static/media/icon-globe-selected.710d591f35853d3d683c0088c3aa7011.svg",
     "static/media/icon-globe.svg": "/timeqode_poc/static/media/icon-globe.86fe081a285dd57399ac1daef0d98dd2.svg",
-    "main.5d98b8b2.css.map": "/timeqode_poc/static/css/main.5d98b8b2.css.map",
-    "main.69f00551.js.map": "/timeqode_poc/static/js/main.69f00551.js.map",
+    "main.a3274059.css.map": "/timeqode_poc/static/css/main.a3274059.css.map",
+    "main.36d9fd20.js.map": "/timeqode_poc/static/js/main.36d9fd20.js.map",
     "787.22f79fa1.chunk.js.map": "/timeqode_poc/static/js/787.22f79fa1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d98b8b2.css",
-    "static/js/main.69f00551.js"
+    "static/css/main.a3274059.css",
+    "static/js/main.36d9fd20.js"
   ]
 }
