@@ -3,7 +3,7 @@ import * as React from 'react';
 
 function ExpenseManagement() {
     return (
-        <Container disableGutters>
+        <Container disableGutters sx={{zIndex: 1}}>
             <Grid container>
                 {/* Left Space */}
                 <Grid item xs={12} sm={5}>
