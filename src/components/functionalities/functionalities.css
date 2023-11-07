@@ -1,0 +1,60 @@
+/* Container needed to position the overlay. Adjust the width as needed */
+.functionalities {
+    position: relative;
+    width: 100%;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* background-color: black; */
+    background:
+    linear-gradient(45deg, rgba(9,13,17,   0.9), rgba(45,65,86,  0.9));
+
+  }
+  
+  /* Make the image to responsive */
+  .functionalities-image {
+    /* display: block; */
+    /* width: 90%; */
+    height: 800px;
+    /* height: auto;  */
+  
+  }
+
+  .report-image {
+    height: 800px;  
+  }
+
+  @media (max-width:629px) {
+    img#functionalities {
+      /* display: none; */
+      margin-top: 30px;
+      height:261px;
+      float: right;
+      content: url("../../assets/images/functionalities-mobile.png");
+      width: 360px;
+      
+    }
+
+    img#report {
+      /* display: none; */
+      margin-top: 30px;
+      height:261px;
+      float: left;
+      width: 360px;
+      content: url("../../assets/images/report-mobile.png");
+    }
+  }
+  
+  /* The overlay effect - lays on top of the container and over the image */
+  .overlay {
+    /* position: absolute; */
+    /* top:0;
+    bottom: 0; */
+    /* height: auto; */
+    background:
+    linear-gradient(45deg, rgba(9,13,17, 0.9), rgba(45,65,86, 0.9));
+    /* color: #f1f1f1; */
+    /* width: 100%; */
+  }
+
+
