@@ -245,6 +245,7 @@ function MenuBar() {
                                 textTransform: 'capitalize',
                                 fontSize: '15px',
                                 padding: '8px',
+                                paddingLeft: '16px',
                                 '&:hover': {
                                   color: '#009FF7',
                                 },
