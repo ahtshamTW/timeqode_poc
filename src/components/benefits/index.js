@@ -34,9 +34,9 @@ const Benefits = () => {
           md={6}
           lg={6}
           sx={{
-            backgroundImage: `url(${IMAGES.dark1})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            // backgroundImage: `url(${IMAGES.dark1})`,
+            // backgroundSize: "cover",
+            // backgroundPosition: "center",
             minHeight: {
               xs: "360px",
               sm: "610px",
@@ -49,28 +49,28 @@ const Benefits = () => {
             pl: {
               xs: "16px",
               sm: "158px",
-            }
+            },
+            // '&:hover': {
+            //     transform: "scale(1.3) translateX(10%) translateY(10%)",
+            //     transition: "transform 1s ease-out"
+            // }
+            
           }}
         >
-          <div
-            style={{
-              background:
-                "transparent linear-gradient(270deg, #01132600 0%, #011326 100%) 0% 0% no-repeat padding-box",
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-            }}
-          ></div>
+        <div class="dark1">
+            <img src={IMAGES.dark1}/>
+        </div>
+        <div className="text-overlay">
+
           <Typography
             variant="h3"
             fontSize={{ xs: "20px", sm: "30px" }}
             fontFamily="Montserrat"
             sx={{
-              color: " #FFFFFF",
+              color: "#FFFFFF",
               padding: "8px",
               textAlign: "left",
+              zIndex:1
             }}
           >
             <span style={{ color: "#8570EB" }}>Access</span> from any type of device
@@ -80,13 +80,15 @@ const Benefits = () => {
             fontFamily="Montserrat"
             fontSize={{ xs: "20px", sm: "30px" }}
             sx={{
-              color: " #FFFFFF",
+              color: "#FFFFFF",
               padding: "8px",
               textAlign: "center",
+              zIndex: 1
             }}
           >
             (laptop, tablet, mobile)
           </Typography>
+          </div>
         </Grid>
       </Grid>
     </Container>
