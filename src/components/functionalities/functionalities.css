@@ -24,7 +24,7 @@
     height: 800px;  
   }
 
-  @media (max-width:629px) {
+  @media (max-width:900px) {
     img#functionalities {
       /* display: none; */
       margin-top: 30px;
@@ -52,7 +52,7 @@
     bottom: 0; */
     /* height: auto; */
     background:
-    linear-gradient(45deg, rgba(9,13,17, 0.9), rgba(45,65,86, 0.9));
+    linear-gradient(45deg, rgba(9,13,17, 1), rgba(45,65,86, 0.9));
     /* color: #f1f1f1; */
     /* width: 100%; */
   }

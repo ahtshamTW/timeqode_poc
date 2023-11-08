@@ -68,12 +68,11 @@ export const Pricing = () => {
 
   return (
     <Box
-      pt={10}
-      pb={10}
       bgcolor={"white"}
       sx={{
         width: "100%",
         height: "auto",
+        marginTop: { xs: "64px", sm: "148px" },
       }}
     >
       <Container maxWidth="xl">
@@ -81,12 +80,13 @@ export const Pricing = () => {
           <Grid item>
             <Typography
               fontWeight={900}
-              variant="h3"
               sx={{
                 textAlign: {
                   xs: "center",
                   sm: "left",
                 },
+                fontSize: { xs: 36, sm: 72 },
+                lineHeight: { xs: "40px", sm: "68px" },
               }}
               fontFamily={"Montserrat"}
               color={"#2D4156"}
@@ -97,12 +97,12 @@ export const Pricing = () => {
           </Grid>
           <Grid direction={"column"} container paddingTop={10} rowSpacing={5}>
             <Typography
-              variant="body2"
               sx={{
                 textAlign: {
                   xs: "center",
                   sm: "left",
                 },
+                fontSize: { xs: "16px" },
               }}
               fontFamily={"Montserrat"}
               color={"#0F3131"}
@@ -111,12 +111,12 @@ export const Pricing = () => {
               Minimum 10 users required.
             </Typography>
             <Typography
-              variant="body2"
               sx={{
                 textAlign: {
                   xs: "center",
                   sm: "left",
                 },
+                fontSize: { xs: "16px" },
               }}
               fontFamily={"Montserrat"}
               color={"#0F3131"}
@@ -168,7 +168,15 @@ export const Pricing = () => {
           </Grid>
         </Grid>
 
-        <Grid pt="10" container spacing={10}>
+        <Grid
+          pt="10"
+          container
+          spacing={{
+            xs: "48px",
+            sm: "48px",
+            md: 10,
+          }}
+        >
           {tiers.map((tier) => (
             <Grid item key={tier.title} xs={12} md={4}>
               <Card

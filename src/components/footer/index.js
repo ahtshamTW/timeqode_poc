@@ -5,12 +5,13 @@ import IMAGES from "../../assets";
 export const Footer = () => {
   return (
     <Box
-      pt={10}
-      pb={10}
       bgcolor={"#2D4156"}
       sx={{
         width: "100%",
         height: "auto",
+        marginTop: { xs: "64px", sm: "148px" },
+        paddingTop: "64px",
+        paddingBottom: "148px",
       }}
     >
       <Container maxWidth="lg">

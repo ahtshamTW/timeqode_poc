@@ -23,11 +23,11 @@ const Help = () => {
 
   return (
     <Box
-      py={10}
       bgcolor={"white"}
       sx={{
         width: "100%",
         height: "auto",
+        marginTop: { xs: "64px", sm: "148px" },
       }}
     >
       <Container maxWidth="xl">
@@ -35,13 +35,15 @@ const Help = () => {
           <Grid direction={"column"} item lg={4}>
             <Typography
               fontWeight={900}
-              variant="h3"
               sx={{
                 textAlign: {
                   xs: "center",
                   sm: "left",
                 },
+                fontSize: { xs: 36, sm: 72 },
+                lineHeight: { xs: "40px", sm: "68px" },
               }}
+              lineHeight={"68px"}
               fontFamily={"Montserrat"}
               color={"#2D4156"}
               textAlign={"left"}
@@ -51,11 +53,15 @@ const Help = () => {
 
             <Typography
               pt={5}
-              variant="h5"
               sx={{
                 textAlign: {
                   xs: "center",
                   sm: "left",
+                },
+                fontSize: { xs: "16px", md: "30px" },
+                pb: {
+                  xs: 5,
+                  md: 0,
                 },
               }}
               fontFamily={"Montserrat"}
@@ -69,7 +75,16 @@ const Help = () => {
           <Grid item lg={2} />
           <Grid item lg={6}>
             <form onSubmit={handleSubmit}>
-              <Stack spacing={2} direction="row" sx={{ marginBottom: 4 }}>
+              <Stack
+                spacing={2}
+                direction={{ xs: "column", sm: "column", md: "row" }}
+                sx={{
+                  marginBottom: {
+                    xs: 2,
+                    sm: 4,
+                  },
+                }}
+              >
                 <TextField
                   type="text"
                   variant="standard"
@@ -103,7 +118,16 @@ const Help = () => {
                   required
                 />
               </Stack>
-              <Stack spacing={2} direction="row" sx={{ marginBottom: 4 }}>
+              <Stack
+                spacing={2}
+                direction={{ xs: "column", sm: "column", md: "row" }}
+                sx={{
+                  marginBottom: {
+                    xs: 2,
+                    sm: 4,
+                  },
+                }}
+              >
                 <TextField
                   type="email"
                   variant="standard"
@@ -156,17 +180,13 @@ const Help = () => {
                 focused
               />
 
-              <Stack direction="row" sx={{ marginBottom: 4 }}>
+              <Stack direction="row" sx={{ marginBottom: 4, marginLeft: -1 }}>
                 <Checkbox required defaultChecked />
 
                 <Typography
                   variant="body2"
                   sx={{
                     alignSelf: "center",
-                    textAlign: {
-                      xs: "center",
-                      sm: "left",
-                    },
                   }}
                   fontFamily={"Montserrat"}
                   color={"#2D4156"}
@@ -177,22 +197,31 @@ const Help = () => {
                 </Typography>
               </Stack>
               <Button
-                style={{
-                  backgroundColor: "#1488E4",
-                  borderColor: "#0B7AFF",
-                  borderWidth: 1,
-                  borderRadius: 8,
-                  width: 336,
-                  height: 53,
+                sx={{
+                  width: { xs: "356px", sm: "396px" },
+                  height: { xs: "39px", sm: "56px" },
+                  background: "#1488E4 0% 0% no-repeat padding-box",
+                  border: "1px solid #1488E4",
+                  textTransform: "none",
                   fontFamily: "Montserrat",
-                  fontSize: 24,
-                  fontWeight: 400,
                 }}
                 variant="contained"
-                color="secondary"
-                type="submit"
               >
-                Submit
+                <Typography
+                  variant="body2"
+                  fontSize={{ xs: "16px", sm: "24px" }}
+                  sx={{
+                    textAlign: {
+                      xs: "center",
+                      sm: "left",
+                    },
+                  }}
+                  fontFamily={"Montserrat"}
+                  color={"#FFFFFF"}
+                  textAlign={"center"}
+                >
+                  Submit
+                </Typography>
               </Button>
             </form>
           </Grid>

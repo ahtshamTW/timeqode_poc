@@ -17,6 +17,12 @@ const Functionalities = () => {
   const ArrowIcon = ({ color }) => {
     return (
       <ArrowForwardIcon
+        sx={{
+          paddingTop: {
+            sx: 0,
+            sm: "6px",
+          },
+        }}
         style={{
           color,
         }}
@@ -25,18 +31,17 @@ const Functionalities = () => {
   };
   return (
     <Box
-      my={10}
-      // py={10}
       bgcolor={"#2D4156"}
       sx={{
         width: "100%",
         backgroundImage: { xs: "none", md: `url(${IMAGES.logoWhite})` },
         backgroundRepeat: `no-repeat`,
         backgroundSize: "cover",
+        marginTop: { xs: "64px", sm: "148px" },
       }}
     >
       <Container class="overlay" maxWidth="100%" disableGutters>
-        <Grid container py={10}>
+        <Grid container py={{ xs: "64px", sm: "148px" }}>
           <Grid
             item
             xs={12}
@@ -61,15 +66,24 @@ const Functionalities = () => {
             alignSelf={"center"}
             order={{ xs: 1, sm: 1, md: 2, lg: 2 }}
           >
-            <Grid alignContent={"start"} container direction={"column"}>
+            <Grid
+              px={{
+                xs: 1,
+                sm: 0,
+              }}
+              alignContent={"start"}
+              container
+              direction={"column"}
+            >
               <Typography
                 fontWeight={900}
-                variant="h3"
                 sx={{
                   textAlign: {
                     xs: "center",
                     sm: "left",
                   },
+                  fontSize: { xs: "36px", sm: "72px" },
+                  lineHeight: { xs: "40px", sm: "68px" },
                 }}
                 fontFamily={"Montserrat"}
                 color={"#FFFFFF"}
@@ -81,10 +95,11 @@ const Functionalities = () => {
               <Stack paddingTop={5} direction="row" spacing={2}>
                 <ArrowIcon color="#00E0F7" />
                 <Typography
-                  variant="body1"
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Advance payment request flow.
                 </Typography>
@@ -92,10 +107,11 @@ const Functionalities = () => {
               <Stack direction="row" spacing={2}>
                 <ArrowIcon color="#00E0F7" />
                 <Typography
-                  variant="body1"
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Expenses report flow with advance payment
                 </Typography>
@@ -103,10 +119,11 @@ const Functionalities = () => {
               <Stack direction="row" spacing={2}>
                 <ArrowIcon color="#0B7AFF" />
                 <Typography
-                  variant="body1"
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Expenses report flow without advance payment
                 </Typography>
@@ -115,10 +132,11 @@ const Functionalities = () => {
               <Stack direction="row" spacing={2}>
                 <ArrowIcon color="#274EF4" />
                 <Typography
-                  variant="body1"
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Setup of approval flow.
                 </Typography>
@@ -127,10 +145,11 @@ const Functionalities = () => {
               <Stack direction="row" spacing={2}>
                 <ArrowIcon color="#4A27F4" />
                 <Typography
-                  variant="body1"
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Types of expenditure master file, setup according to different
                   VAT %
@@ -140,10 +159,11 @@ const Functionalities = () => {
               <Stack direction="row" spacing={2}>
                 <ArrowIcon color="#8721F4" />
                 <Typography
-                  variant="body1"
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Supplier master file and creation of new suppliers
                 </Typography>
@@ -152,10 +172,11 @@ const Functionalities = () => {
               <Stack direction="row" spacing={2}>
                 <ArrowIcon color="#B722D1" />
                 <Typography
-                  variant="body1"
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Access restricted to certain type of user
                 </Typography>
@@ -186,28 +207,25 @@ const Functionalities = () => {
             <Grid
               alignContent={"start"}
               container
-              paddingLeft={20}
               direction={"column"}
               sx={{
                 paddingLeft: {
-                  xs: 0,
-                  sm: 0,
-                  md: 20,
-                  lg: 20,
+                  xs: 1,
+                  sm: 1,
+                  md: 5,
+                  lg: 25,
                 },
               }}
             >
               <Typography
                 fontWeight={900}
-                variant="h3"
                 sx={{
                   textAlign: {
                     xs: "center",
                     sm: "left",
                   },
-                  // typography: {
-                  //   xs: "h3",
-                  // },
+                  fontSize: { xs: 36, sm: 72 },
+                  lineHeight: { xs: "40px", sm: "68px" },
                 }}
                 fontFamily={"Montserrat"}
                 color={"#FFFFFF"}
@@ -219,10 +237,11 @@ const Functionalities = () => {
               <Stack paddingTop={5} direction="row" spacing={2}>
                 <ArrowIcon color="#B722D1" />
                 <Typography
-                  variant="body1"
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Export in Excel of the list of advance payments and expense
                   statements
@@ -231,10 +250,11 @@ const Functionalities = () => {
               <Stack direction="row" spacing={2}>
                 <ArrowIcon color="#E038B8" />
                 <Typography
-                  variant="body1"
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Overview per employee
                 </Typography>
@@ -242,10 +262,11 @@ const Functionalities = () => {
               <Stack direction="row" spacing={2}>
                 <ArrowIcon color="#E82394" />
                 <Typography
-                  variant="body1"
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Analysis by type of expenses / cost center / supplier
                 </Typography>
@@ -254,10 +275,11 @@ const Functionalities = () => {
               <Stack direction="row" spacing={2}>
                 <ArrowIcon color="#DD2F5D" />
                 <Typography
-                  variant="body1"
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Dashboard with document overview
                 </Typography>
@@ -266,10 +288,11 @@ const Functionalities = () => {
               <Stack direction="row" spacing={2}>
                 <ArrowIcon color="#0BDDD7" />
                 <Typography
-                  variant="body1"
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Setup of approval flows
                 </Typography>
@@ -278,10 +301,11 @@ const Functionalities = () => {
               <Stack direction="row" spacing={2}>
                 <ArrowIcon color="#00E0F7" />
                 <Typography
-                  variant="body1"
                   fontFamily={"Montserrat"}
                   color={"#FFFFFF"}
                   textAlign={"left"}
+                  fontSize={{ xs: "16px", md: "1.5rem" }}
+                  lineHeight={{ xs: "24px", sm: "36px" }}
                 >
                   Summary of monthly expense statements
                 </Typography>
