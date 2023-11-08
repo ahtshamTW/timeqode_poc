@@ -1,21 +1,22 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Container from '@mui/material/Container';
 import ButtonBase from '@mui/material/ButtonBase';
 import Icon from '@mui/material/Icon';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import logo from '../assets/images/logo.svg';
 import iconGlobe from '../assets/images/icon-globe.svg';
+import iconGlobeSelected from '../assets/images/icon-globe-selected.svg';
 import '../App.css';
+import { ClickAwayListener, Popper } from '@mui/base';
+import { Collapse, Grow, MenuList, Paper } from '@mui/material';
 
 const pages = [
   'Business Solutions',
@@ -43,13 +44,7 @@ const subMenu = [
   'Legal 365',
   'Agriculture',
 ];
-const theme = createTheme({
-  palette: {
-    blue: {
-      light: '#009FF7',
-    },
-  },
-});
+
 
 // Split the subMenu into three columns with 5 values each
 const columns = [[], [], []];
@@ -61,14 +56,51 @@ subMenu.forEach((subPage, index) => {
 function MenuBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = React.useState(false);
+  const anchorRef = React.useRef(null);
   const [hoveredButton, setHoveredButton] = React.useState(null);
   const [submenuAnchors, setSubmenuAnchors] = React.useState({});
+  const [openSubmenu, setOpenSubmenu] = React.useState(false)
+  const [selectedPage, setSelectedPage] = React.useState(null)
+
+  const theme = createTheme({
+    components: {
+      MuiPaper: {
+        styleOverrides: {
+          root: ({ ownerState }) => ({
+            [theme.breakpoints.down("sm")]:{
+              left: '0px !important',
+              maxWidth: '100% !important',
+              maxHeight: openSubmenu && '100% !important'
+            }
+                
+          }),
+        },
+      },
+    },
+  });
+  const handleToggle = (event) => {
+    if(anchorEl){
+      handleCloseNavMenu()
+    }
+    else{
+      handleOpenNavMenu(event)
+    }
+  };
+
+  const handleClose = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return;
+    }
+  };
+
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
+    setSelectedPage(null)
     setAnchorEl(null);
   };
 
@@ -82,6 +114,10 @@ function MenuBar() {
     setHoveredButton(null);
   };
 
+  const getSelectedColor = (page) => {
+    return selectedPage == page ? '#009FF7' : '#2D4156'
+  }
+
   theme.props = {
     MuiList: {
       onMouseLeave: () => handleCloseSubmenu(hoveredButton),
@@ -90,7 +126,7 @@ function MenuBar() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container disableGutters maxWidth="xl" sx={{ bgcolor: '#FFFFFF' }}>
+      <Container disableGutters maxWidth="xl" sx={{ bgcolor: '#FFFFFF', zIndex: 9999 }}>
         <Box
           sx={{
             flexGrow: 1,
@@ -115,11 +151,12 @@ function MenuBar() {
             aria-label="menu"
             aria-controls="menu-appbar"
             aria-haspopup="true"
-            onClick={handleOpenNavMenu}
+            // onClick={handleOpenNavMenu}
+            onClick={handleToggle}
             color="default"
             edge="end"
           >
-            <MenuIcon />
+            <MenuIcon htmlColor='#1488E4' fontSize='32px'/>
           </IconButton>
           <Menu
             id="menu-appbar"
@@ -134,16 +171,81 @@ function MenuBar() {
               horizontal: 'left',
             }}
             open={Boolean(anchorEl)}
-            onClose={handleCloseNavMenu}
+            // onClose={handleCloseNavMenu}
             sx={{
-              display: { xs: 'block', md: 'none' },
+              padding: '0px',
+              margin: '0px',
+              display: { xs: 'block', md: 'none'  },
             }}
           >
-            {pages.map((page) => (
-              <MenuItem key={page} onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">{page}</Typography>
-              </MenuItem>
-            ))}
+            <MenuList
+              autoFocusItem={open}
+              id="composition-menu"
+              aria-labelledby="composition-button"
+            // onKeyDown={handleListKeyDown}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={() => {
+                  setSelectedPage(page)
+                  if (page == 'Business Solutions') {
+                    setOpenSubmenu(!openSubmenu)
+                  }
+                  // else {
+                  //   handleCloseNavMenu()
+                  // }
+                }} sx={{ width: '400px', justifyContent: 'center', flexDirection: 'column' }}>
+                  <Typography 
+                  variant="body"
+                  fontSize={'20px'}
+                  sx={{
+                    display: 'flex',
+                    alignSelf: "center",
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent:'center'
+                  }}
+                  fontFamily={"Montserrat"}
+                  color={getSelectedColor(page)}                  
+                  textAlign="center">
+                  {page === 'Eng' && (
+                  <Icon
+                    sx={{
+                      display: 'flex',
+                      paddingRight: '8px',
+                      '&:hover': { color: getSelectedColor(page)},
+                    }}
+                  >
+                    <img src={selectedPage == 'Eng' ? iconGlobeSelected : iconGlobe} alt="globe"/>
+                  </Icon>
+                )}
+                    {page}
+                    {page === 'Business Solutions' ? openSubmenu ? <ExpandLessIcon htmlColor={getSelectedColor(page)} fontSize='32px'/> : <ExpandMoreIcon htmlColor={getSelectedColor(page)} fontSize='32px'/> : null}
+                    </Typography>
+
+                   {page == 'Business Solutions' && <Collapse in={openSubmenu} timeout="auto" unmountOnExit sx={{ }}>
+                    <MenuList
+                      autoFocusItem={open}
+                      id="composition-menu"
+                      aria-labelledby="composition-button"
+
+                    >
+                      {subMenu.map((page) => (
+                        <MenuItem key={page} onClick={handleClose} sx={{ width: '400px', justifyContent: 'center' }}>
+                          <Typography 
+                          variant="body"
+                          sx={{
+                            alignSelf: "center"
+                          }}
+                          fontFamily={"Montserrat"}
+                          color={"#2D4156"}                  
+                          textAlign="center">{page}</Typography>
+                        </MenuItem>
+                      ))}
+                    </MenuList>
+                  </Collapse>}
+                </MenuItem>
+              ))}
+            </MenuList>
           </Menu>
         </Box>
 
@@ -169,10 +271,9 @@ function MenuBar() {
           </Icon>
           <Box
             sx={{
-              flexGrow: 1,
               display: { xs: 'none', md: 'flex' },
               justifyContent: 'center',
-              bgcolor: '#FFFFFF',
+              bgcolor: 'transparent',
             }}
           >
             {pages.map((page, index) => (
@@ -204,13 +305,11 @@ function MenuBar() {
                     sx={{
                       display: 'flex',
                       paddingRight: '8px',
-                      '&:hover': { color: '#009FF7' },
                     }}
                   >
-                    <img src={iconGlobe} alt="logo" />
+                    <img src={hoveredButton == 'Eng' ? iconGlobeSelected : iconGlobe} alt="logo"/>
                   </Icon>
-                )
-                }
+                )}
                 {page}
                 {page === 'Business Solutions' && (
                   <Menu
@@ -225,16 +324,19 @@ function MenuBar() {
                       vertical: 'top',
                       horizontal: 'left',
                     }}
+                    sx={{
+                      marginTop: '10px'
+                    }}
                   >
                     <div
                       style={{
                         display: 'flex',
                         justifyContent: 'space-between',
-                        marginTop: '10px',
+                        marginTop: '16px',
                       }}
                     >
                       {columns.map((column, columnIndex) => (
-                        <div key={columnIndex} style={{ width: '300px' }}>
+                        <div key={columnIndex} style={{ width: '360px' }}>
                           {column.map((subPage, subIndex) => (
                             <ButtonBase
                               disableRipple
@@ -253,8 +355,8 @@ function MenuBar() {
                               }}
                               aria-owns={open ? 'menu-appbar' : null}
                               aria-haspopup="true"
-                              onMouseOver={(event) => {}}
-                              onMouseLeave={() => {}}
+                              onMouseOver={(event) => { }}
+                              onMouseLeave={() => { }}
                               style={{
                                 textAlign: 'center',
                               }}

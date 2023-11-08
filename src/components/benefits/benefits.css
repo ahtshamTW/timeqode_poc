@@ -1,0 +1,119 @@
+.dark1 {
+  width: 390px;
+  height: 360px;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .dark1 {
+    width: 964px;
+    height: 610px;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+.dark1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 800ms;
+}
+
+.dark1:hover img {
+  transform: scale(1.3) translateX(10%) translateY(10%);
+  transition: 1s ease-out;
+}
+
+.dark1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(1, 19, 38, 1) 0%, rgba(1, 19, 38, 0) 100%);
+}
+
+.left {
+  margin: 60px;
+  width: 450px;
+  height: 310px;
+  overflow: hidden;
+  position: relative;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 800ms;
+}
+
+.left:hover img {
+  transform: scale(1.3) translateX(-10%) translateY(10%);
+  transition: 1s ease-out;
+}
+
+.left::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets//images/dark-1-min2x.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.text-overlay {
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1;
+  padding: 10px;
+  color: white;
+  font-family: 'Montserrat';
+  font-size: 30px;
+  margin-left: 16px;
+  /* margin-top: 130px; */
+}
+
+@media (min-width: 768px) {
+  .text-overlay {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1;
+    padding: 10px;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    margin-left: 142px;
+    /* margin-top: 190px; */
+  }
+}
+
+.text-overlay span {
+  color: #8570EB;
+}
