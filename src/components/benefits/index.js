@@ -602,7 +602,7 @@ const Benefits = () => {
             alignItems: "flex-start",
           }}
         >
-          <div class="dark1" >
+          <div class="dark1">
             <img src={IMAGES.dark5} />
           </div>
           <div className="text-overlay-dark">

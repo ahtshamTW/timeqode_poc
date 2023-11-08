@@ -37,7 +37,7 @@ const Functionalities = () => {
         backgroundImage: { xs: "none", md: `url(${IMAGES.logoWhite})` },
         backgroundRepeat: `no-repeat`,
         backgroundSize: "cover",
-        marginTop: { xs: "64px", sm: "148px" },
+        // marginTop: { xs: "64px", sm: "148px" },
       }}
     >
       <Container class="overlay" maxWidth="100%" disableGutters>
