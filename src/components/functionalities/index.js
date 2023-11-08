@@ -25,8 +25,6 @@ const Functionalities = () => {
   };
   return (
     <Box
-      my={10}
-      // py={10}
       bgcolor={"#2D4156"}
       sx={{
         width: "100%",
