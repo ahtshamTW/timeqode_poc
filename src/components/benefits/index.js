@@ -16,7 +16,11 @@ const Benefits = () => {
                 xs: "center",
                 sm: "right",
               },
-              py: '48px'
+              py: '48px',
+              px: {
+                xs: '0px',
+                sm: '96px'
+              }
             }}
             fontFamily="Montserrat"
             color="#2D4156"
@@ -45,7 +49,7 @@ const Benefits = () => {
             alignItems: "flex-start",
             pl: {
               // xs: "16px",
-              sm: "158px",
+              // sm: "158px",
             },
             // '&:hover': {
             //     transform: "scale(1.3) translateX(10%) translateY(10%)",
