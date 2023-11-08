@@ -16,10 +16,7 @@ const Benefits = () => {
                 xs: "center",
                 sm: "right",
               },
-              pr: {
-                xs: 0,
-                sm: 16,
-              },
+              py: '48px'
             }}
             fontFamily="Montserrat"
             color="#2D4156"
@@ -47,7 +44,7 @@ const Benefits = () => {
             justifyContent: "center",
             alignItems: "flex-start",
             pl: {
-              xs: "16px",
+              // xs: "16px",
               sm: "158px",
             },
             // '&:hover': {
@@ -57,7 +54,7 @@ const Benefits = () => {
             
           }}
         >
-        <div class="dark1">
+        <div class="dark1" >
             <img src={IMAGES.dark1}/>
         </div>
         <div className="text-overlay">
