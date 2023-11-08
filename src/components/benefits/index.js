@@ -5,9 +5,16 @@ import "./benefits.css";
 
 const Benefits = () => {
   return (
-    <Container maxWidth="100%" disableGutters sx={{ mt: 16 }}>
-      <Grid container>
-        <Grid item xs={12} sm={12} md={6} lg={6}>
+    <Container maxWidth="100%" disableGutters sx={{ mt: 16}}>
+      <Grid container sx={{flexDirection: 'row', flexWrap: 'wrap'}}>
+        <Grid item xs={12} sm={12} md={6} lg={6}
+        sx={{
+          order: {
+            xs: 1,
+            sm: 1,
+          },
+        }}
+        >
           <Typography
             fontWeight={900}
             variant="h3"
@@ -39,10 +46,14 @@ const Benefits = () => {
           md={6}
           lg={6}
           sx={{
-            minHeight: {
-              xs: "360px",
-              sm: "610px",
+            order: {
+              xs: 2,
+              sm: 2,
             },
+            // minHeight: {
+            //   xs: "360px",
+            //   sm: "610px",
+            // },
             position: "relative",
             display: "flex",
             flexDirection: "column",
@@ -50,6 +61,7 @@ const Benefits = () => {
             alignItems: "flex-start",
           }}
         >
+          
           <div class="dark1" >
             <img src={IMAGES.dark1} />
           </div>
@@ -82,22 +94,26 @@ const Benefits = () => {
             </Typography>
           </div>
         </Grid>
-      </Grid>
-
-      {/* //// */}
-
-      <Grid container>
         <Grid item xs={12} sm={12} md={6} lg={6}
           sx={{
-            minHeight: {
-              xs: "360px",
-              sm: "610px",
+            order: {
+              xs: 3,
+              sm: 3,
             },
-            position: "relative",
+            marginTop: {
+              xs: "0px", 
+              sm: "-500px", 
+            },
+            // minHeight: {
+            //   xs: "360px",
+            //   sm: "610px",
+            // },
+            position: 'relative',
+            // position: { xs: "relative", sm: "absolute" },
+            // marginTop: { xs: "0px", sm: "200px" },
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            // alignItems: "flex-end",
           }}
         >
           <div class="light1" >
@@ -113,7 +129,7 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: '16px', sm: '158px' }
               }}
             >
               <span style={{ color: "#274EF4" }}>Decrease</span> the necessary time for
@@ -127,7 +143,7 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: '16px', sm: '158px' }
               }}
             >
               creating an expense report
@@ -141,15 +157,20 @@ const Benefits = () => {
           md={6}
           lg={6}
           sx={{
-            minHeight: {
-              xs: "360px",
-              sm: "610px",
+            order: {
+              xs: 4,
+              sm: 4,
             },
-            position: "relative",
+            // minHeight: {
+            //   xs: "360px",
+            //   sm: "610px",
+            // },
+            // marginBottom: { xs: "0px", sm: "200px" },
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "flex-start",
+            alignSelf: 'flex-end'
           }}
         >
           <div class="dark1" >
@@ -184,18 +205,22 @@ const Benefits = () => {
             </Typography>
           </div>
         </Grid>
-      </Grid>
-
-      {/* //// */}
-
-      <Grid container>
         <Grid item xs={12} sm={12} md={6} lg={6}
         sx={{
-          minHeight: {
-            xs: "360px",
-            sm: "610px",
+          order: {
+            xs: 5,
+            sm: 5,
           },
+          marginTop: {
+            xs: "0px", 
+            sm: "-500px", 
+          },
+          // minHeight: {
+          //   xs: "360px",
+          //   sm: "610px",
+          // },
           position: "relative",
+          // marginTop: {xs: '0px', sm: '200px'},
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -249,6 +274,7 @@ const Benefits = () => {
             </Typography>
           </div>
         </Grid>
+        
         <Grid
           item
           xs={12}
@@ -256,15 +282,21 @@ const Benefits = () => {
           md={6}
           lg={6}
           sx={{
-            minHeight: {
-              xs: "360px",
-              sm: "610px",
+            order: {
+              xs: 6,
+              sm: 6,
             },
+            // minHeight: {
+            //   xs: "360px",
+            //   sm: "610px",
+            // },
             position: "relative",
+            // marginBottom: { xs: "0px", sm: "200px" },
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "flex-start",
+            alignSelf: 'flex-end'
           }}
         >
           <div class="dark1" >
@@ -312,18 +344,22 @@ const Benefits = () => {
             </Typography>
           </div>
         </Grid>
-      </Grid>
-
-      {/* //// */}
-
-      <Grid container>
-      <Grid item xs={12} sm={12} md={6} lg={6}
+        <Grid item xs={12} sm={12} md={6} lg={6}
         sx={{
-          minHeight: {
-            xs: "360px",
-            sm: "610px",
+          order: {
+            xs: 7,
+            sm: 7,
           },
+          marginTop: {
+            xs: "0px", 
+            sm: "-500px", 
+          },
+          // minHeight: {
+          //   xs: "360px",
+          //   sm: "610px",
+          // },
           position: "relative",
+          // marginBottom: {xs: '0px', sm: '200px'},
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -391,6 +427,8 @@ const Benefits = () => {
             </Typography>
           </div>
         </Grid>
+
+        
         <Grid
           item
           xs={12}
@@ -398,10 +436,14 @@ const Benefits = () => {
           md={6}
           lg={6}
           sx={{
-            minHeight: {
-              xs: "360px",
-              sm: "610px",
+            order: {
+              xs: 8,
+              sm: 8,
             },
+            // minHeight: {
+            //   xs: "360px",
+            //   sm: "610px",
+            // },
             position: "relative",
             display: "flex",
             flexDirection: "column",
@@ -454,18 +496,23 @@ const Benefits = () => {
             </Typography>
           </div>
         </Grid>
-      </Grid>
 
-      {/* //// */}
-
-      <Grid container>
-      <Grid item xs={12} sm={12} md={6} lg={6}
+        <Grid item xs={12} sm={12} md={6} lg={6}
         sx={{
-          minHeight: {
-            xs: "360px",
-            sm: "610px",
+          order: {
+            xs: 9,
+            sm: 9,
           },
+          marginTop: {
+            xs: "0px", 
+            sm: "-500px", 
+          },
+          // minHeight: {
+          //   xs: "360px",
+          //   sm: "610px",
+          // },
           position: "relative",
+          // marginBottom: { xs: "0px", sm: "200px" },
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -540,10 +587,14 @@ const Benefits = () => {
           md={6}
           lg={6}
           sx={{
-            minHeight: {
-              xs: "360px",
-              sm: "610px",
+            order: {
+              xs: 10,
+              sm: 10,
             },
+            // minHeight: {
+            //   xs: "360px",
+            //   sm: "610px",
+            // },
             position: "relative",
             display: "flex",
             flexDirection: "column",
