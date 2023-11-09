@@ -33,7 +33,7 @@ function ExpenseManagement() {
               color={"#2D4156"}
               textAlign={{ xs: "center", sm: "left" }}
             >
-              Expense & Management
+              Expense Management
             </Typography>
 
             <Typography
