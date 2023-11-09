@@ -49,6 +49,11 @@ const Functionalities = () => {
             md={6}
             lg={6}
             order={{ xs: 2, sm: 2, md: 1, lg: 1 }}
+            sx={{ display: 'flex', justifyContent: 'flex-end',
+            pr: {
+              sm: '158px'
+            }
+           }}
           >
             <img
               id={"functionalities"}
@@ -189,7 +194,7 @@ const Functionalities = () => {
           container
           alignItems={"center"}
           rowSpacing={1}
-          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          // columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           sx={{
             py: {
               xs: 0,
@@ -203,114 +208,112 @@ const Functionalities = () => {
             },
           }}
         >
-          <Grid item xs={12} md={6} alignSelf={"center"}>
-            <Grid
-              alignContent={"start"}
-              container
-              direction={"column"}
+          <Grid item xs={12} md={6}
+            alignContent={"end"}
+            container
+            direction={"column"}
+            sx={{
+              pr: {
+                sm: '158px'
+              },
+              pl:{
+                sm: '212px'
+              }
+            }}
+          >
+            <Typography
+              fontWeight={900}
               sx={{
-                paddingLeft: {
-                  xs: 1,
-                  sm: 1,
-                  md: 5,
-                  lg: 25,
+                textAlign: {
+                  xs: "center",
+                  sm: "left",
                 },
+                fontSize: { xs: 36, sm: 72 },
+                lineHeight: { xs: "40px", sm: "68px" },
               }}
+              fontFamily={"Montserrat"}
+              color={"#FFFFFF"}
+              textAlign={"left"}
             >
+              Reports & Overviews
+            </Typography>
+
+            <Stack paddingTop={5} direction="row" spacing={2}>
+              <ArrowIcon color="#B722D1" />
               <Typography
-                fontWeight={900}
-                sx={{
-                  textAlign: {
-                    xs: "center",
-                    sm: "left",
-                  },
-                  fontSize: { xs: 36, sm: 72 },
-                  lineHeight: { xs: "40px", sm: "68px" },
-                }}
                 fontFamily={"Montserrat"}
                 color={"#FFFFFF"}
                 textAlign={"left"}
+                fontSize={{ xs: "16px", md: "1.5rem" }}
+                lineHeight={{ xs: "24px", sm: "36px" }}
               >
-                Reports & Overviews
+                Export in Excel of the list of advance payments and expense
+                statements
               </Typography>
+            </Stack>
+            <Stack direction="row" spacing={2}>
+              <ArrowIcon color="#E038B8" />
+              <Typography
+                fontFamily={"Montserrat"}
+                color={"#FFFFFF"}
+                textAlign={"left"}
+                fontSize={{ xs: "16px", md: "1.5rem" }}
+                lineHeight={{ xs: "24px", sm: "36px" }}
+              >
+                Overview per employee
+              </Typography>
+            </Stack>
+            <Stack direction="row" spacing={2}>
+              <ArrowIcon color="#E82394" />
+              <Typography
+                fontFamily={"Montserrat"}
+                color={"#FFFFFF"}
+                textAlign={"left"}
+                fontSize={{ xs: "16px", md: "1.5rem" }}
+                lineHeight={{ xs: "24px", sm: "36px" }}
+              >
+                Analysis by type of expenses / cost center / supplier
+              </Typography>
+            </Stack>
 
-              <Stack paddingTop={5} direction="row" spacing={2}>
-                <ArrowIcon color="#B722D1" />
-                <Typography
-                  fontFamily={"Montserrat"}
-                  color={"#FFFFFF"}
-                  textAlign={"left"}
-                  fontSize={{ xs: "16px", md: "1.5rem" }}
-                  lineHeight={{ xs: "24px", sm: "36px" }}
-                >
-                  Export in Excel of the list of advance payments and expense
-                  statements
-                </Typography>
-              </Stack>
-              <Stack direction="row" spacing={2}>
-                <ArrowIcon color="#E038B8" />
-                <Typography
-                  fontFamily={"Montserrat"}
-                  color={"#FFFFFF"}
-                  textAlign={"left"}
-                  fontSize={{ xs: "16px", md: "1.5rem" }}
-                  lineHeight={{ xs: "24px", sm: "36px" }}
-                >
-                  Overview per employee
-                </Typography>
-              </Stack>
-              <Stack direction="row" spacing={2}>
-                <ArrowIcon color="#E82394" />
-                <Typography
-                  fontFamily={"Montserrat"}
-                  color={"#FFFFFF"}
-                  textAlign={"left"}
-                  fontSize={{ xs: "16px", md: "1.5rem" }}
-                  lineHeight={{ xs: "24px", sm: "36px" }}
-                >
-                  Analysis by type of expenses / cost center / supplier
-                </Typography>
-              </Stack>
+            <Stack direction="row" spacing={2}>
+              <ArrowIcon color="#DD2F5D" />
+              <Typography
+                fontFamily={"Montserrat"}
+                color={"#FFFFFF"}
+                textAlign={"left"}
+                fontSize={{ xs: "16px", md: "1.5rem" }}
+                lineHeight={{ xs: "24px", sm: "36px" }}
+              >
+                Dashboard with document overview
+              </Typography>
+            </Stack>
 
-              <Stack direction="row" spacing={2}>
-                <ArrowIcon color="#DD2F5D" />
-                <Typography
-                  fontFamily={"Montserrat"}
-                  color={"#FFFFFF"}
-                  textAlign={"left"}
-                  fontSize={{ xs: "16px", md: "1.5rem" }}
-                  lineHeight={{ xs: "24px", sm: "36px" }}
-                >
-                  Dashboard with document overview
-                </Typography>
-              </Stack>
+            <Stack direction="row" spacing={2}>
+              <ArrowIcon color="#0BDDD7" />
+              <Typography
+                fontFamily={"Montserrat"}
+                color={"#FFFFFF"}
+                textAlign={"left"}
+                fontSize={{ xs: "16px", md: "1.5rem" }}
+                lineHeight={{ xs: "24px", sm: "36px" }}
+              >
+                Setup of approval flows
+              </Typography>
+            </Stack>
 
-              <Stack direction="row" spacing={2}>
-                <ArrowIcon color="#0BDDD7" />
-                <Typography
-                  fontFamily={"Montserrat"}
-                  color={"#FFFFFF"}
-                  textAlign={"left"}
-                  fontSize={{ xs: "16px", md: "1.5rem" }}
-                  lineHeight={{ xs: "24px", sm: "36px" }}
-                >
-                  Setup of approval flows
-                </Typography>
-              </Stack>
-
-              <Stack direction="row" spacing={2}>
-                <ArrowIcon color="#00E0F7" />
-                <Typography
-                  fontFamily={"Montserrat"}
-                  color={"#FFFFFF"}
-                  textAlign={"left"}
-                  fontSize={{ xs: "16px", md: "1.5rem" }}
-                  lineHeight={{ xs: "24px", sm: "36px" }}
-                >
-                  Summary of monthly expense statements
-                </Typography>
-              </Stack>
-            </Grid>
+            <Stack direction="row" spacing={2}>
+              <ArrowIcon color="#00E0F7" />
+              <Typography
+                fontFamily={"Montserrat"}
+                color={"#FFFFFF"}
+                textAlign={"left"}
+                fontSize={{ xs: "16px", md: "1.5rem" }}
+                lineHeight={{ xs: "24px", sm: "36px" }}
+              >
+                Summary of monthly expense statements
+              </Typography>
+            </Stack>
           </Grid>
           <Grid item xs={12} md={6}>
             <img

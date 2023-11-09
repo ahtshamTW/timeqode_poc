@@ -50,10 +50,6 @@ const Benefits = () => {
               xs: 2,
               sm: 2,
             },
-            // minHeight: {
-            //   xs: "360px",
-            //   sm: "610px",
-            // },
             position: "relative",
             display: "flex",
             flexDirection: "column",
@@ -104,16 +100,12 @@ const Benefits = () => {
               xs: "0px", 
               sm: "-500px", 
             },
-            // minHeight: {
-            //   xs: "360px",
-            //   sm: "610px",
-            // },
             position: 'relative',
-            // position: { xs: "relative", sm: "absolute" },
-            // marginTop: { xs: "0px", sm: "200px" },
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+            alignItems: "flex-end",
+
           }}
         >
           <div class="light1" >
@@ -161,11 +153,6 @@ const Benefits = () => {
               xs: 4,
               sm: 4,
             },
-            // minHeight: {
-            //   xs: "360px",
-            //   sm: "610px",
-            // },
-            // marginBottom: { xs: "0px", sm: "200px" },
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -215,16 +202,11 @@ const Benefits = () => {
             xs: "0px", 
             sm: "-500px", 
           },
-          // minHeight: {
-          //   xs: "360px",
-          //   sm: "610px",
-          // },
           position: "relative",
-          // marginTop: {xs: '0px', sm: '200px'},
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          // alignItems: "flex-end",
+          alignItems: "flex-end",
         }}>
           <div class="light1" >
             <img src={IMAGES.light2} />
@@ -286,12 +268,7 @@ const Benefits = () => {
               xs: 6,
               sm: 6,
             },
-            // minHeight: {
-            //   xs: "360px",
-            //   sm: "610px",
-            // },
             position: "relative",
-            // marginBottom: { xs: "0px", sm: "200px" },
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -354,16 +331,12 @@ const Benefits = () => {
             xs: "0px", 
             sm: "-500px", 
           },
-          // minHeight: {
-          //   xs: "360px",
-          //   sm: "610px",
-          // },
+
           position: "relative",
-          // marginBottom: {xs: '0px', sm: '200px'},
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          // alignItems: "flex-end",
+          alignItems: "flex-end",
         }}>
           <div class="light1" >
             <img src={IMAGES.light3} />
@@ -440,10 +413,6 @@ const Benefits = () => {
               xs: 8,
               sm: 8,
             },
-            // minHeight: {
-            //   xs: "360px",
-            //   sm: "610px",
-            // },
             position: "relative",
             display: "flex",
             flexDirection: "column",
@@ -507,16 +476,12 @@ const Benefits = () => {
             xs: "0px", 
             sm: "-500px", 
           },
-          // minHeight: {
-          //   xs: "360px",
-          //   sm: "610px",
-          // },
+
           position: "relative",
-          // marginBottom: { xs: "0px", sm: "200px" },
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          // alignItems: "flex-end",
+          alignItems: "flex-end",
         }}>
           <div class="light1" >
             <img src={IMAGES.light4} />
@@ -591,10 +556,6 @@ const Benefits = () => {
               xs: 10,
               sm: 10,
             },
-            // minHeight: {
-            //   xs: "360px",
-            //   sm: "610px",
-            // },
             position: "relative",
             display: "flex",
             flexDirection: "column",

@@ -24,6 +24,13 @@
     height: 800px;  
   }
 
+  @media (min-width: 768px) {
+    .report-image {
+      height: 684px;
+      width: 956px;  
+    }
+  }
+
   @media (max-width:900px) {
     img#functionalities {
       /* display: none; */
