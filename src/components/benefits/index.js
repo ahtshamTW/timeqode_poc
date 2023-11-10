@@ -5,39 +5,44 @@ import "./benefits.css";
 
 const Benefits = () => {
   return (
-    <Container maxWidth="100%" disableGutters sx={{ mt: 16}}>
-      <Grid container sx={{flexDirection: 'row', flexWrap: 'wrap'}}>
-        <Grid item xs={12} sm={12} md={6} lg={6}
-        sx={{
-          order: {
-            xs: 1,
-            sm: 1,
-          },
-        }}
+    <Container maxWidth="100%" disableGutters sx={{ mt: 16 }}>
+      <Grid container sx={{ flexDirection: "row", flexWrap: "wrap" }}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={6}
+          lg={6}
+          sx={{
+            order: {
+              xs: 1,
+              sm: 1,
+            },
+          }}
         >
           <Typography
             fontWeight={900}
-            variant="h3"
             sx={{
               textAlign: {
                 xs: "center",
                 sm: "right",
               },
               py: {
-                xs: '48px',
-                sm: '64px'
+                xs: "48px",
+                sm: "64px",
               },
               px: {
-                xs: '0px',
-                sm: '96px'
-              }
+                xs: "0px",
+                sm: "96px",
+              },
+              fontSize: { xs: 36, sm: 72 },
+              lineHeight: { xs: "40px", sm: "72px" },
             }}
             fontFamily="Montserrat"
             color="#2D4156"
           >
             Benefits
           </Typography>
-
         </Grid>
         <Grid
           item
@@ -57,8 +62,7 @@ const Benefits = () => {
             alignItems: "flex-start",
           }}
         >
-          
-          <div class="dark1" >
+          <div class="dark1">
             <img src={IMAGES.dark1} />
           </div>
           <div className="text-overlay-dark">
@@ -70,10 +74,11 @@ const Benefits = () => {
                 color: "#FFFFFF",
                 padding: "8px",
                 textAlign: "left",
-                zIndex: 1
+                zIndex: 1,
               }}
             >
-              <span style={{ color: "#8570EB" }}>Access</span> from any type of device
+              <span style={{ color: "#8570EB" }}>Access</span> from any type of
+              device
             </Typography>
             <Typography
               variant="h3"
@@ -83,35 +88,39 @@ const Benefits = () => {
                 color: "#FFFFFF",
                 padding: "8px",
                 textAlign: "center",
-                zIndex: 1
+                zIndex: 1,
               }}
             >
               (laptop, tablet, mobile)
             </Typography>
           </div>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={6}
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={6}
+          lg={6}
           sx={{
             order: {
               xs: 3,
               sm: 3,
             },
             marginTop: {
-              xs: "0px", 
-              sm: "-500px", 
+              xs: "0px",
+              sm: "-500px",
             },
-            position: 'relative',
+            position: "relative",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "flex-end",
-
           }}
         >
-          <div class="light1" >
+          <div class="light1">
             <img src={IMAGES.light1} />
           </div>
-          <div className="text-overlay-light" >
+          <div className="text-overlay-light">
             <Typography
               variant="h3"
               fontSize={{ xs: "20px", sm: "30px" }}
@@ -121,10 +130,11 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: { xs: '16px', sm: '158px' }
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
-              <span style={{ color: "#274EF4" }}>Decrease</span> the necessary time for
+              <span style={{ color: "#274EF4" }}>Decrease</span> the necessary
+              time for
             </Typography>
             <Typography
               variant="h3"
@@ -135,7 +145,7 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: { xs: '16px', sm: '158px' }
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
               creating an expense report
@@ -157,10 +167,10 @@ const Benefits = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "flex-start",
-            alignSelf: 'flex-end'
+            alignSelf: "flex-end",
           }}
         >
-          <div class="dark1" >
+          <div class="dark1">
             <img src={IMAGES.dark2} />
           </div>
           <div className="text-overlay-dark">
@@ -172,10 +182,11 @@ const Benefits = () => {
                 color: "#FFFFFF",
                 padding: "8px",
                 textAlign: "left",
-                zIndex: 1
+                zIndex: 1,
               }}
             >
-              <span style={{ color: "#E038B8" }}>Electronic</span> archiving documents
+              <span style={{ color: "#E038B8" }}>Electronic</span> archiving
+              documents
             </Typography>
             <Typography
               variant="h3"
@@ -185,33 +196,39 @@ const Benefits = () => {
                 color: "#FFFFFF",
                 padding: "8px",
                 textAlign: "center",
-                zIndex: 1
+                zIndex: 1,
               }}
             >
               attached to the expense report
             </Typography>
           </div>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={6}
-        sx={{
-          order: {
-            xs: 5,
-            sm: 5,
-          },
-          marginTop: {
-            xs: "0px", 
-            sm: "-500px", 
-          },
-          position: "relative",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "flex-end",
-        }}>
-          <div class="light1" >
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={6}
+          lg={6}
+          sx={{
+            order: {
+              xs: 5,
+              sm: 5,
+            },
+            marginTop: {
+              xs: "0px",
+              sm: "-500px",
+            },
+            position: "relative",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "flex-end",
+          }}
+        >
+          <div class="light1">
             <img src={IMAGES.light2} />
           </div>
-          <div className="text-overlay-light" >
+          <div className="text-overlay-light">
             <Typography
               variant="h3"
               fontSize={{ xs: "20px", sm: "30px" }}
@@ -221,10 +238,11 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
-              <span style={{ color: "#DD2F5D" }}>Reduce</span> the number of printed
+              <span style={{ color: "#DD2F5D" }}>Reduce</span> the number of
+              printed
             </Typography>
             <Typography
               variant="h3"
@@ -235,7 +253,7 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
               documents circulating between
@@ -249,14 +267,14 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
               departments
             </Typography>
           </div>
         </Grid>
-        
+
         <Grid
           item
           xs={12}
@@ -273,10 +291,10 @@ const Benefits = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "flex-start",
-            alignSelf: 'flex-end'
+            alignSelf: "flex-end",
           }}
         >
-          <div class="dark1" >
+          <div class="dark1">
             <img src={IMAGES.dark3} />
           </div>
           <div className="text-overlay-dark">
@@ -288,10 +306,11 @@ const Benefits = () => {
                 color: "#FFFFFF",
                 padding: "8px",
                 textAlign: "left",
-                zIndex: 1
+                zIndex: 1,
               }}
             >
-              <span style={{ color: "#00E0F7" }}>Simplified</span> administration – Easily
+              <span style={{ color: "#00E0F7" }}>Simplified</span>{" "}
+              administration – Easily
             </Typography>
             <Typography
               variant="h3"
@@ -301,7 +320,7 @@ const Benefits = () => {
                 color: "#FFFFFF",
                 padding: "8px",
                 textAlign: "center",
-                zIndex: 1
+                zIndex: 1,
               }}
             >
               customizable user profiles and
@@ -314,34 +333,40 @@ const Benefits = () => {
                 color: "#FFFFFF",
                 padding: "8px",
                 textAlign: "center",
-                zIndex: 1
+                zIndex: 1,
               }}
             >
               approval hierarchies
             </Typography>
           </div>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={6}
-        sx={{
-          order: {
-            xs: 7,
-            sm: 7,
-          },
-          marginTop: {
-            xs: "0px", 
-            sm: "-500px", 
-          },
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={6}
+          lg={6}
+          sx={{
+            order: {
+              xs: 7,
+              sm: 7,
+            },
+            marginTop: {
+              xs: "0px",
+              sm: "-500px",
+            },
 
-          position: "relative",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "flex-end",
-        }}>
-          <div class="light1" >
+            position: "relative",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "flex-end",
+          }}
+        >
+          <div class="light1">
             <img src={IMAGES.light3} />
           </div>
-          <div className="text-overlay-light" >
+          <div className="text-overlay-light">
             <Typography
               variant="h3"
               fontSize={{ xs: "20px", sm: "30px" }}
@@ -351,10 +376,11 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
-              <span style={{ color: "#8721F4" }}>Integrated</span> communication between 
+              <span style={{ color: "#8721F4" }}>Integrated</span> communication
+              between
             </Typography>
             <Typography
               variant="h3"
@@ -365,7 +391,7 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
               the users and the financial-
@@ -379,7 +405,7 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
               accounting department through
@@ -393,7 +419,7 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
               real-time notifications by email
@@ -401,7 +427,6 @@ const Benefits = () => {
           </div>
         </Grid>
 
-        
         <Grid
           item
           xs={12}
@@ -420,7 +445,7 @@ const Benefits = () => {
             alignItems: "flex-start",
           }}
         >
-          <div class="dark1" >
+          <div class="dark1">
             <img src={IMAGES.dark4} />
           </div>
           <div className="text-overlay-dark">
@@ -432,10 +457,11 @@ const Benefits = () => {
                 color: "#FFFFFF",
                 padding: "8px",
                 textAlign: "left",
-                zIndex: 1
+                zIndex: 1,
               }}
             >
-              <span style={{ color: "#EB829E" }}>Improve</span> document operation time
+              <span style={{ color: "#EB829E" }}>Improve</span> document
+              operation time
             </Typography>
             <Typography
               variant="h3"
@@ -445,7 +471,7 @@ const Benefits = () => {
                 color: "#FFFFFF",
                 padding: "8px",
                 textAlign: "center",
-                zIndex: 1
+                zIndex: 1,
               }}
             >
               with the integration of the ERP and
@@ -458,7 +484,7 @@ const Benefits = () => {
                 color: "#FFFFFF",
                 padding: "8px",
                 textAlign: "center",
-                zIndex: 1
+                zIndex: 1,
               }}
             >
               usage of common master files
@@ -466,27 +492,33 @@ const Benefits = () => {
           </div>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6}
-        sx={{
-          order: {
-            xs: 9,
-            sm: 9,
-          },
-          marginTop: {
-            xs: "0px", 
-            sm: "-500px", 
-          },
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={6}
+          lg={6}
+          sx={{
+            order: {
+              xs: 9,
+              sm: 9,
+            },
+            marginTop: {
+              xs: "0px",
+              sm: "-500px",
+            },
 
-          position: "relative",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "flex-end",
-        }}>
-          <div class="light1" >
+            position: "relative",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "flex-end",
+          }}
+        >
+          <div class="light1">
             <img src={IMAGES.light4} />
           </div>
-          <div className="text-overlay-light" >
+          <div className="text-overlay-light">
             <Typography
               variant="h3"
               fontSize={{ xs: "20px", sm: "30px" }}
@@ -496,10 +528,11 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
-              <span style={{ color: "#009DAB" }}>Visualization</span> in real time of the report  
+              <span style={{ color: "#009DAB" }}>Visualization</span> in real
+              time of the report
             </Typography>
             <Typography
               variant="h3"
@@ -510,10 +543,10 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
-              of advance payments and expense 
+              of advance payments and expense
             </Typography>
             <Typography
               variant="h3"
@@ -524,10 +557,10 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
-              statements at individual or 
+              statements at individual or
             </Typography>
             <Typography
               variant="h3"
@@ -538,7 +571,7 @@ const Benefits = () => {
                 padding: "8px",
                 textAlign: "right",
                 zIndex: 1,
-                pr: {xs: '16px', sm: '158px'}
+                pr: { xs: "16px", sm: "158px" },
               }}
             >
               centralized level
@@ -575,10 +608,11 @@ const Benefits = () => {
                 color: "#FFFFFF",
                 padding: "8px",
                 textAlign: "left",
-                zIndex: 1
+                zIndex: 1,
               }}
             >
-              <span style={{ color: "#00E0F7" }}>Elimination</span> of human error
+              <span style={{ color: "#00E0F7" }}>Elimination</span> of human
+              error
             </Typography>
           </div>
         </Grid>
