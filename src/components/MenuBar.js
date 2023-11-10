@@ -16,7 +16,7 @@ import iconGlobe from "../assets/images/icon-globe.svg";
 import iconGlobeSelected from "../assets/images/icon-globe-selected.svg";
 import "../App.css";
 import { ClickAwayListener, Popper } from "@mui/base";
-import { Collapse, Grow, MenuList, Paper } from "@mui/material";
+import { Collapse, MenuList } from "@mui/material";
 
 const pages = [
   "Business Solutions",
@@ -170,7 +170,7 @@ function MenuBar() {
               horizontal: "left",
             }}
             open={Boolean(anchorEl)}
-            // onClose={handleCloseNavMenu}
+            onClose={handleCloseNavMenu}
             sx={{
               padding: "0px",
               margin: "0px",
@@ -264,7 +264,7 @@ function MenuBar() {
                         {subMenu.map((page) => (
                           <MenuItem
                             key={page}
-                            onClick={handleClose}
+                            // onClick={handleClose}
                             sx={{ width: "400px", justifyContent: "center" }}
                           >
                             <Typography
