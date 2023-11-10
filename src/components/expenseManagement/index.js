@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import * as React from "react";
 
-function ExpenseManagement() {
+function ExpenseManagement({ onTouch }) {
   return (
     <Box
       sx={{
@@ -67,6 +67,9 @@ function ExpenseManagement() {
                 marginTop: "48px",
               }}
               variant="contained"
+              onClick={() => {
+                onTouch();
+              }}
             >
               <Typography
                 variant="body2"

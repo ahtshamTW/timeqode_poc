@@ -1,5 +1,5 @@
+import { useRef } from "react";
 import { Box } from "@mui/material";
-import "./App.css";
 import MenuBar from "./components/MenuBar";
 import Benefits from "./components/benefits";
 import ExpenseManagement from "./components/expenseManagement";
@@ -8,8 +8,15 @@ import Functionalities from "./components/functionalities";
 import Help from "./components/help";
 import Pricing from "./components/pricing";
 import IMAGES from "./assets";
+import "./App.css";
 
 function App() {
+  const formRef = useRef(null);
+
+  const onTouch = () => {
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -22,11 +29,13 @@ function App() {
           }}
         >
           <MenuBar />
-          <ExpenseManagement />
+          <ExpenseManagement onTouch={onTouch} />
           <Benefits />
           <Functionalities />
           <Pricing />
-          <Help />
+          <div ref={formRef}>
+            <Help />
+          </div>
           <Footer />
         </Box>
       </header>
