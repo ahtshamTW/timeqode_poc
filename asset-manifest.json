@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/timeqode_poc/static/css/main.1593842b.css",
-    "main.js": "/timeqode_poc/static/js/main.a18ca70d.js",
+    "main.css": "/timeqode_poc/static/css/main.d045aec5.css",
+    "main.js": "/timeqode_poc/static/js/main.fb878a2a.js",
     "static/js/787.22f79fa1.chunk.js": "/timeqode_poc/static/js/787.22f79fa1.chunk.js",
     "static/media/light-3-min2x.jpg": "/timeqode_poc/static/media/light-3-min2x.dff306c3dac1d994f8b3.jpg",
     "static/media/functionalities-mobile.png": "/timeqode_poc/static/media/functionalities-mobile.d93a7e30040564375640.png",
@@ -14,6 +14,7 @@
     "static/media/report.png": "/timeqode_poc/static/media/report.6d18ffb343ef28eef5f8.png",
     "static/media/report2x.png": "/timeqode_poc/static/media/report2x.569e5c86c53bdf7c214a.png",
     "static/media/light-4-min2x.jpg": "/timeqode_poc/static/media/light-4-min2x.ed748203ecd3debc1773.jpg",
+    "static/media/logo-half.png": "/timeqode_poc/static/media/logo-half.c579baf6b00e2c370326.png",
     "static/media/logo-white.png": "/timeqode_poc/static/media/logo-white.c693cd2b40bd1324b711.png",
     "static/media/dark-1-min2x.jpg": "/timeqode_poc/static/media/dark-1-min2x.79462f663495befffe5f.jpg",
     "static/media/dark-2-min2x.jpg": "/timeqode_poc/static/media/dark-2-min2x.fe9021649ed6d1a55c05.jpg",
@@ -80,12 +81,12 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/timeqode_poc/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "static/media/icon-globe-selected.svg": "/timeqode_poc/static/media/icon-globe-selected.710d591f35853d3d683c0088c3aa7011.svg",
     "static/media/icon-globe.svg": "/timeqode_poc/static/media/icon-globe.86fe081a285dd57399ac1daef0d98dd2.svg",
-    "main.1593842b.css.map": "/timeqode_poc/static/css/main.1593842b.css.map",
-    "main.a18ca70d.js.map": "/timeqode_poc/static/js/main.a18ca70d.js.map",
+    "main.d045aec5.css.map": "/timeqode_poc/static/css/main.d045aec5.css.map",
+    "main.fb878a2a.js.map": "/timeqode_poc/static/js/main.fb878a2a.js.map",
     "787.22f79fa1.chunk.js.map": "/timeqode_poc/static/js/787.22f79fa1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1593842b.css",
-    "static/js/main.a18ca70d.js"
+    "static/css/main.d045aec5.css",
+    "static/js/main.fb878a2a.js"
   ]
 }
