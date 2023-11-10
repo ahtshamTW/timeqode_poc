@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/timeqode_poc/static/css/main.d045aec5.css",
-    "main.js": "/timeqode_poc/static/js/main.fb878a2a.js",
+    "main.js": "/timeqode_poc/static/js/main.51cb6fe8.js",
     "static/js/787.22f79fa1.chunk.js": "/timeqode_poc/static/js/787.22f79fa1.chunk.js",
     "static/media/light-3-min2x.jpg": "/timeqode_poc/static/media/light-3-min2x.dff306c3dac1d994f8b3.jpg",
     "static/media/functionalities-mobile.png": "/timeqode_poc/static/media/functionalities-mobile.d93a7e30040564375640.png",
@@ -82,11 +82,11 @@
     "static/media/icon-globe-selected.svg": "/timeqode_poc/static/media/icon-globe-selected.710d591f35853d3d683c0088c3aa7011.svg",
     "static/media/icon-globe.svg": "/timeqode_poc/static/media/icon-globe.86fe081a285dd57399ac1daef0d98dd2.svg",
     "main.d045aec5.css.map": "/timeqode_poc/static/css/main.d045aec5.css.map",
-    "main.fb878a2a.js.map": "/timeqode_poc/static/js/main.fb878a2a.js.map",
+    "main.51cb6fe8.js.map": "/timeqode_poc/static/js/main.51cb6fe8.js.map",
     "787.22f79fa1.chunk.js.map": "/timeqode_poc/static/js/787.22f79fa1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d045aec5.css",
-    "static/js/main.fb878a2a.js"
+    "static/js/main.51cb6fe8.js"
   ]
 }
