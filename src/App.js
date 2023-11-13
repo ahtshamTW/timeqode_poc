@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import MenuBar from "./components/MenuBar";
 import Benefits from "./components/benefits";
 import ExpenseManagement from "./components/expenseManagement";
@@ -20,14 +20,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Box
-          bgcolor={"#FFFFFF"}
+          <Container disableGutters
+          style={{
+            maxWidth: '1955px'
+          }}
           sx={{
             backgroundImage: { xs: "none", md: `url(${IMAGES.logoHalf})` },
             backgroundRepeat: `no-repeat`,
             backgroundSize: { xs: "0%", sm: "40%", md: "30%" },
-          }}
-        >
+          }}>
           <MenuBar />
           <ExpenseManagement onTouch={onTouch} />
           <Benefits />
@@ -37,7 +38,7 @@ function App() {
             <Help />
           </div>
           <Footer />
-        </Box>
+          </Container>
       </header>
     </div>
   );
