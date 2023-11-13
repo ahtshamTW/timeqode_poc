@@ -372,6 +372,7 @@ function MenuBar() {
                     sx={{
                       marginTop: "10px",
                     }}
+                    onClose={() => handleCloseSubmenu(page)}
                   >
                     <div
                       style={{
